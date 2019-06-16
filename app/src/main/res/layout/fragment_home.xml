@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.example.carlossmy.midjogaapp.fragments.HomeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="50dp"
+    tools:context=".fragments.HomeFragment">
+
+  <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/refresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/list"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          tools:listitem="@layout/fragment_cagnotte"
+          android:visibility="gone"/>
+
+
+      <RelativeLayout
+          android:id="@+id/no_connection"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:visibility="gone"
+          android:paddingTop="10dp"
+          >
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/no_connection_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            android:layout_marginTop="10dp"
+
+            android:src="@drawable/ic_signal_wifi_off_primary_60dp" />
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/no_connection_text"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Il semble que vous n'êtes pas connectés, veuillez rééssayer"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_below="@id/no_connection_img"/>
+        <Button
+            android:id="@+id/no_connection_try_again"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corners_blue_stroke"
+            android:text="Rééssayer"
+            android:layout_below="@id/no_connection_text"
+            />
+
+
+      </RelativeLayout>
+      <ProgressBar
+          android:id="@+id/loading_bar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+          />
+    </LinearLayout>
+  </android.support.v4.widget.SwipeRefreshLayout>
+  <!-- DECLARING FLOATING ACTION BUTTON -->
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/add_fab"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_margin="16dp"
+      android:layout_marginBottom="200dp"
+      android:clickable="true"
+      android:src="@drawable/ic_add_white_24dp"
+      app:backgroundTint="@color/colorPrimary"
+      app:layout_anchor="@id/refresh"
+      app:layout_anchorGravity="bottom|right"
+      />
+</android.support.design.widget.CoordinatorLayout>
+
+

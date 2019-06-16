@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linear_entry"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".activities.EntryActivity">
+
+  <ImageView
+      android:id="@+id/logo"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_gravity="center"
+      android:layout_marginTop="120dp"
+      android:src="@drawable/cercle15" />
+
+  <TextView
+      android:id="@+id/intro"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/logo"
+      android:textColor="@color/white"
+      android:layout_gravity="center"
+      android:text="Ensemble on peut l'atteindre "
+      android:textSize="20sp"/>
+
+
+  <LinearLayout
+
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="100dp"
+      android:orientation="vertical"
+
+      android:layout_gravity="center">
+
+
+    <RelativeLayout
+        android:id="@+id/registerGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:onClick="registerGoogleClicked"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:background="@drawable/rounded_corners"
+        >
+
+      <ImageView
+          android:id="@+id/logo_gmail"
+          android:layout_width="30dp"
+          android:layout_height="match_parent"
+          android:gravity="top"
+          android:src="@drawable/logo_google" />
+
+      <TextView
+          android:id="@+id/texte_gmail"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_toRightOf="@+id/logo_gmail"
+          android:padding="10dp"
+
+          android:text="Connectez-vous avec Gmail "
+          android:textColor="#fff"
+          android:textSize="15sp"
+          android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:onClick="registerClicked"
+        card_view:cardCornerRadius="20dp"
+        android:layout_marginTop="20dp">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/rounded_corners_blue_stroke"
+          android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/logo_mail"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:paddingLeft="5dp"
+            android:gravity="top"
+            android:src="@drawable/mail" />
+
+        <TextView
+            android:id="@+id/texte_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/logo_mail"
+            android:layout_centerInParent="true"
+            android:paddingTop="12dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Inscrivez-vous avec votre Email "
+            android:layout_gravity="center_horizontal"
+            android:textColor="#025299"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+      </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <Button
+        android:id="@+id/sign_in"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="Déja inscrit ?"
+        android:onClick="login"
+        android:background="@drawable/transparent_background"/>
+  </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.UserActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:layout_margin="0dp"/>
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/toolbar"
+            android:background="@drawable/money">
+            <ImageView
+                android:id="@+id/profil"
+                android:layout_width="100dp"
+                android:layout_gravity="bottom"
+                android:src="@drawable/logo"
+                android:layout_height="100dp" />
+            <Button
+                android:id="@+id/edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Editer le profil"
+                android:layout_alignParentBottom="true"
+                android:textColor="#fff"
+                android:background="@drawable/rounded_corners_blue"/>
+        </FrameLayout>
+        
+        <RelativeLayout
+            android:id="@+id/info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frame">
+            <TextView
+                android:id="@+id/user_full_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textSize="18sp"
+               />
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email"
+                android:textSize="18sp"
+                android:layout_below="@+id/user_full_name"/>
+            <TextView
+                android:id="@+id/user_birthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Birthdate"
+                android:textSize="18sp"
+
+                android:layout_below="@+id/user_email"
+                android:drawableLeft="@drawable/ic_card_giftcard_black_24dp"/>
+            <TextView
+                android:id="@+id/user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone "
+                android:textSize="18sp"
+                android:layout_below="@+id/user_birthdate"
+                android:drawableLeft="@drawable/ic_phone_black_24dp"/>
+        </RelativeLayout>
+
+        <TextView
+             android:layout_below="@+id/info_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Toutes les paiements effectués"
+            android:textColor="@color/colorPrimary"/>
+
+    </RelativeLayout>
+
+</ScrollView>

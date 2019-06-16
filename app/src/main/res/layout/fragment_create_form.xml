@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CreateFormFragment"
+    android:layout_marginTop="100dp">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:hint="Description">
+
+      <android.support.design.widget.TextInputEditText
+
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:lines="4"
+          android:maxLines="10"
+          android:minLines="1"
+          android:scrollbars="vertical"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/montant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:hint="Montant à atteindre">
+
+      <android.support.design.widget.TextInputEditText
+
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:inputType="numberDecimal"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp">
+
+      <Button
+          android:id="@+id/due_date"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:background="@drawable/rounded_corners_blue"
+          android:gravity="center"
+          android:padding="5dp"
+          android:text=" Choisir la date d'échéance"
+          android:textColor="#FFF"
+          android:textSize="10sp" />
+
+      <TextView
+          android:id="@+id/point"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginRight="10dp"
+          android:layout_toRightOf="@+id/birthdate"
+          android:gravity="center"
+          android:text=" : "
+          android:textColor="#000" />
+
+      <TextView
+          android:id="@+id/date"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_toRightOf="@+id/point"
+          android:gravity="center"
+          android:text="Naissance"
+          android:textColor="#000" />
+    </RelativeLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/localisation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:hint="Lieu"
+        >
+
+      <android.support.design.widget.TextInputEditText
+          android:id="@+id/input"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+      </android.support.design.widget.TextInputEditText>
+
+    </android.support.design.widget.TextInputLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="Visibilité"
+          android:textColor="@color/colorPrimary"
+          android:gravity="center"
+          android:textSize="17sp"
+          android:layout_marginLeft="10dp"
+          android:id="@+id/visible"/>
+      <RadioGroup
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+
+          android:layout_toRightOf="@id/visible"
+          >
+        <RadioButton
+            android:id="@+id/radio_public"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Public "
+            android:checked="false"
+            />
+        <RadioButton
+            android:id="@+id/radio_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privé"
+            android:checked="true"
+            />
+      </RadioGroup></RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/create_cagnotte"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/rounded_corners_blue"
+        android:gravity="center"
+        android:text="Je crée ma cagnotte"
+        android:textColor="#FFF" />
+
+  </LinearLayout>
+
+
+</ScrollView>

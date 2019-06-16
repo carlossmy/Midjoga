@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity">
+  <LinearLayout
+      android:id="@+id/linear_login"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#025299">
+      <Button
+          android:id="@+id/back"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
+          android:onClick="goBack"
+          android:layout_margin="20dp"
+
+          android:gravity="right"
+          />
+    </RelativeLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:hint="E-Mail">
+      <android.support.design.widget.TextInputEditText
+
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:hint="Mot de Passe">
+      <android.support.design.widget.TextInputEditText
+
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          />
+    </android.support.design.widget.TextInputLayout>
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_margin="25dp"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/connection"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:background="@drawable/rounded_corners_blue"
+        android:textColor="#FFF"
+        android:onClick="connectionClicked"
+        android:text="Connexion"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_gravity="center"
+        android:textSize="10sp"
+        android:textColor="@color/cardview_shadow_start_color"
+        android:gravity="center"
+        android:background="@drawable/transparent_background"
+        android:text="Pas encore de compte ? Inscrivez-vious"
+        />
+
+  </LinearLayout>
+
+</ScrollView>

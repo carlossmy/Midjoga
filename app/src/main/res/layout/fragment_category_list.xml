@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.CategoryFragment"
+    android:name="com.example.carlossmy.midjogaapp.fragments.CategoryFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="80dp"
+    >
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Je crée ma cagnotte pour"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="17sp"/>
+    <android.support.v7.widget.RecyclerView
+
+        tools:context=".fragments.CategoryFragment"
+        android:id="@+id/list"
+        android:name="com.example.carlossmy.midjogaapp.fragments.CategoryFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        tools:listitem="@layout/fragment_category"
+        />
+</RelativeLayout>
+
+
+
+
